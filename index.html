@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {;
+            position: relative;
+        }
+        #section1 {padding-top:50px;height:fit-content;color: #fff; background-color: #43a8a0;}
+        #section2 {padding-top:50px;height:fit-content;color: #fff; background-color: #02414d;}
+        #section3 {padding-top:50px;height:fit-content;color: #fff; background-color: #919b70;}
+        #section41 {background-image: url("./pics/woodtree.jpg");
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;}
+        #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="header-logo" class="navbar-brand" href="#">
+                <img src="./pics/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#section1">Tischlerei</a></li>
+                    <li><a href="#section2">Über</a></li>
+                    <li><a href="#section3">Kontakt</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Projekte<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section41">Küche</a></li>
+                            <li><a href="#section42">Schlafzimmer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="section1" class="container-fluid">
+    <div class="container" style="width: 100%">
+        <div class="row">
+            <div class="col-sm-6" style="margin-top: 30px; font-size: 20px">
+                <div>
+                    <h1 class="header1">Tischlerei Trummer</h1>
+                    <p class="textBody">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="text-center text-md-left">
+                        <a class="myButton" onclick="document.getElementById('contact-form').submit();">BILDER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="pics/woodtree.jpg" class="fitImgToSection">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="section2" class="container-fluid fitAll">
+    <h1>Über</h1>
+    <p></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="fitContainerToSection">
+                    <div class="imageWrapper"alt=""></div>
+                    <p class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="fitContainerToSection">
+                    <div class="imageWrapper"alt=""></div>
+                    <p class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="fitContainerToSection">
+                    <div class="imageWrapper"alt=""></div>
+                    <p class="cardText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="section3" class="container-fluid">
+    <h1 class="h1-responsive font-weight-bold my-4">Kontakt</h1>
+
+
+    <div class="container fitSection3" >
+        <div class="row">
+            <p class="w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                a matter of hours to help you.</p>
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0 addmarginToFrom">
+                                <label for="name" class="">Name</label>
+                                <input type="text" id="name" name="name" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0 addmarginToFrom">
+                                <label for="email" class="">Email</label>
+                                <input type="text" id="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0 addmarginToFrom">
+                                <label for="subject" class="">Betreff</label>
+                                <input type="text" id="subject" name="subject" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+
+                            <div class="md-form addmarginToFrom">
+                                <label for="message">Nachricht</label>
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                </form>
+
+                <div class="text-center text-md-left">
+                    <a class="myButton" onclick="document.getElementById('contact-form').submit();">Send</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0 infromationText">
+                    <div id="contact">
+                        <p style="padding-top:25%">Lugitsch 47, 8091 Jagerberg, Austria</p>
+
+                        <p>+ 01 234 567 89</p>
+
+                        <p>contact@mdbootstrap.com</p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="section41" class="container-fluid">
+    <h1>Küche</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section42" class="container-fluid">
+    <h1>Schlafzimmer</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+</body>
+</html>
